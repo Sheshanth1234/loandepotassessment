@@ -1,0 +1,18 @@
+function get_first_recursive_char($str) {
+
+# find all duplicates in given string
+$input = [Regex]::Matches($str, "(.)(?=.*\1)")
+
+# capture all groups and index
+$total_index = $input.index
+
+# get length of index
+$index_length = $total_index.length
+
+if ($total_index -ne $Null) {
+$output = ("Hurray! I found the first recursive character as: ", $input[$index_length-1])
+} else {
+$output = "No Recursive character found in given input string"
+}
+[string] $output
+}
